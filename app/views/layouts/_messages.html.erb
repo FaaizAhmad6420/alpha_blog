@@ -1,3 +1,16 @@
+<div class="container">
 <% flash.each do |name, msg|%>
-  <%= msg %>
+<div class="alert alert-success alert-dismissible fade show pt-2 pb-2" role="alert">
+  <div class="row">
+  <div class="col"><%= msg %></div>
+
+
+<button type="button" class="close col-auto btn btn-sm pt-0 pb-0" data-bs-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+
+  </div>
 <% end %>
+</div>

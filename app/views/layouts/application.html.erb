@@ -8,15 +8,65 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+    .navbar {
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container {
+  margin-top: 25px;
+}
+
+.jumbo {
+  background-image: url('<%= asset_path('jumbo-copy.jpg') %>');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  background-color: black;
+  flex-shrink: none;
+}
+
+a {
+    text-decoration: none;
+}
+    </style>
   </head>
 
-  
+
     <body class="d-flex flex-column">
     <%= render 'layouts/navigation' %>
-
+<div id="page-content">
     <%= render 'layouts/messages' %>
     <%= yield %>
-   
+    </div>
+    <%= render 'layouts/footer' %>
 
   </body>
 </html>
